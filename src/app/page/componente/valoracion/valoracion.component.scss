@@ -1,0 +1,6 @@
+// Definición de una variable con un color aleatorio en formato hexadecimal
+$randomColor: #{sprintf("#%06X", floor(random() * 16777215))};
+
+.star-filled {
+  color: $randomColor; // Usamos la variable $randomColor para el color de relleno
+}

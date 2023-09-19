@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Editar Perfil</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="cerrarModal()">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  
+    <ion-button expand="block" (click)="guardarCambios()">Guardar Cambios</ion-button>
+  </ion-content>

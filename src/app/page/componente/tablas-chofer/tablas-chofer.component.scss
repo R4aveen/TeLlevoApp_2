@@ -1,0 +1,41 @@
+// Estilo para el componente de pestañas
+ion-tabs {
+    // Establecer el color de fondo y otros estilos según tus preferencias
+    background-color: #ffffff; // Cambia esto al color que desees
+    border-top: 1px solid #ccc;
+  
+    // Asegurarse de que el componente de pestañas se muestre en la parte inferior
+    ion-tab-bar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff; // Cambia esto al color que desees
+      border-top: 1px solid #ccc;
+      z-index: 999; // Ajusta esto si es necesario para superponer otros elementos
+    }
+  
+    // Estilo para cada botón de pestaña
+    ion-tab-button {
+      // Personaliza los estilos de los botones de pestaña según tus preferencias
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+  
+      ion-icon {
+        font-size: 24px; // Cambia el tamaño del icono según tus preferencias
+      }
+  
+      &.active-tab ion-icon {
+        color: #0c91eb; // Cambia esto al color deseado para la pestaña activa
+      }
+    }
+  }
+  .fixed-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Establece la altura que desees para el footer */
+    background-color: #ffffff; /* Cambia esto al color deseado para el fondo del footer */
+    border-top: 1px solid #ccc;
+    z-index: 999; /* Ajusta esto si es necesario para superponer otros elementos */
+  }

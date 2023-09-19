@@ -1,0 +1,119 @@
+.custom-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100vh;
+    transition: top 0.3s ease-in-out;
+    max-height: 50vh; /* Limita la altura máxima al 100% de la altura de la ventana */
+
+    overflow-y: auto;
+    background-color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  
+  .custom-panel.ion-slide-up {
+    top: 0;
+  }
+  
+  .custom-panel.ion-slide-down {
+    top: 100vh;
+  }
+  
+  .custom-header {
+    background-color: #f0f0f0;
+    z-index: 1; /* Asegura que la barra de búsqueda esté por encima del contenido deslizable */
+  }
+  
+  .custom-bubble {
+    position: absolute;
+    background-color:#f0f0f0;
+  }
+  
+  .custom-toolbar {
+    background-color: #f0f0f0;
+    z-index: 1; /* Asegura que la barra de búsqueda esté por encima del contenido deslizable */
+  }
+  
+  .custom-container {
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
+    max-width: 600px; /* Establece un ancho máximo para el contenido */
+    text-align: center; /* Alinea el contenido al centro */
+    background-color: #f5f5f5; /* Color de fondo del contenedor */
+    border-radius: 10px; /* Borde redondeado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  
+  .custom-history {
+    padding: 10px; /* Espacio interno del historial */
+    margin-bottom: 20px; /* Margen inferior para separar elementos del historial */
+    background-color: #ffffff; /* Color de fondo del historial */
+    border: 1px solid #ccc; /* Borde del historial */
+    border-radius: 5px; /* Borde redondeado del historial */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave del historial */
+  }
+  
+  .custom-history h5 {
+    font-size: 16px; /* Tamaño de fuente del título del historial */
+    margin-bottom: 10px; /* Margen inferior para separar el título del contenido */
+  }
+  
+  .custom-history ion-button {
+    width: 100%; /* Ancho completo para los botones del historial */
+    margin-bottom: 5px; /* Margen inferior para separar los botones del historial */
+  }
+  
+  
+  .custom-text {
+    font-size: 16px; /* Tamaño de fuente del texto */
+    color: #333; /* Color del texto */
+    margin-bottom: 10px; /* Margen inferior para separar el texto de otros elementos */
+    line-height: 1.5; /* Altura de línea para un espaciado adecuado entre líneas de texto */
+  }
+  
+  
+  .custom-button {
+    background-color: #12ccda; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 20px; /* Relleno del botón (arriba/abajo y izquierda/derecha) */
+    border: none; /* Eliminar borde */
+    border-radius: 5px; /* Radio de borde para hacer esquinas redondeadas */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón por encima */
+    font-size: 16px; /* Tamaño de fuente del texto del botón */
+    transition: background-color 0.3s ease; /* Animación de cambio de color de fondo */
+
+    --buttom{
+        background-color: #23b7f163;
+    }
+  }
+  
+  .custom-button:hover {
+    background-color: #23b7f163; /* Color de fondo del botón al pasar el ratón por encima */
+  }
+  
+  
+  .custom-button-primary {
+    background-color: #fff;
+  }
+  
+  .custom-button-secondary {
+    background-color: #f0f0f0;
+  }
+  
+  .custom-button-text {
+    color: #d8dadb; /* Color del texto de los botones */
+    font-size: 14px; /* Tamaño de fuente del texto de los botones */
+    font-weight: bold; /* Peso de fuente en negrita */
+    text-transform: uppercase; /* Convertir el texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre caracteres */
+  }
+  
+  /* Ejemplo de estilo para el texto de botones al pasar el ratón por encima */
+  .custom-button-text:hover {
+    color: #eaebec; /* Cambiar el color del texto al pasar el ratón por encima */
+  }
+  

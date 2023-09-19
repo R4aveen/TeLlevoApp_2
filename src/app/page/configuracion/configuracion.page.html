@@ -1,0 +1,30 @@
+<ion-header [translucent]="true" class="fondo">
+  <div class="burbuja" style="top: 20%; left: 10%; width: 10px; height: 10px;"></div>
+  <ion-toolbar class="fondoo">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <ion-avatar class="ion-align-self-start ion-padding-end" (click)="irACuenta()">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <ion-title class="ion-align-self-start letra">Configuracion</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-footer class="fixed-footer">
+  <ion-toolbar>
+    <app-tablass></app-tablass>
+  </ion-toolbar>
+</ion-footer>
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-button expand="block" (click)="abrirEditarPerfilModal()">Editar Perfil</ion-button>
+  <ion-button expand="block" (click)="abrirAgregarDireccionParticularModal()">Agregar Dirección Particular</ion-button>
+  <ion-button expand="block" (click)="abrirAgregarDireccionLaboralModal()">Agregar Dirección Laboral</ion-button>
+
+
+</ion-content>
