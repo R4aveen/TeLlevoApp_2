@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalExampleComponent } from '../../inicio/modals/buscar.component';
+import { ModalExampleComponent } from '../../inicio-chofer/modals/buscar.component';
 import { ModalController, NavController } from '@ionic/angular';
 import { Router } from '@angular/router';
 import Swiper from 'swiper';

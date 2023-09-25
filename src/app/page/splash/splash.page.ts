@@ -27,7 +27,7 @@ export class SplashPage implements AfterViewInit {
         .create()
         .addElement(this.card2Image)
         .fill('none')
-        .duration(2000) 
+        .duration(3000) 
         .keyframes([
           { offset: 0, transform: 'scale(1)', opacity: '1' },
           { offset: 0.5, transform: 'scale(1.2)', opacity: '0.3' },

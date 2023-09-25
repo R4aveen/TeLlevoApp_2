@@ -21,13 +21,13 @@ export class TablasChoferComponent  implements OnInit {
   }
 
   inicio(){
-    this.router.navigate(['inicio']);
+    this.router.navigate(['inicio-chofer']);
   }
   actividad(){
-    this.router.navigate(['actividad']);
+    this.router.navigate(['actividad-chofer']);
   }
   configuracion(){
-    this.router.navigate(['configuracion']);
+    this.router.navigate(['configuracion-chofer']);
   }
 
 }
