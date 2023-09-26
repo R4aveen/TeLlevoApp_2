@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ActividadChoferPageRoutingModule } from './actividad-chofer-routing.module';
+import { CuentaChoferPageRoutingModule } from './cuenta-chofer-routing.module';
 
-import { ActividadChoferPage } from './actividad-chofer.page';
+import { CuentaChoferPage } from './cuenta-chofer.page';
 
 import { ComponentecModule } from '../componentec/componentec.module';
 
@@ -16,8 +16,8 @@ import { ComponentecModule } from '../componentec/componentec.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ActividadChoferPageRoutingModule
+    CuentaChoferPageRoutingModule
   ],
-  declarations: [ActividadChoferPage,]
+  declarations: [CuentaChoferPage]
 })
-export class ActividadChoferPageModule {}
+export class CuentaChoferPageModule {}

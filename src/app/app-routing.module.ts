@@ -60,7 +60,11 @@ const routes: Routes = [
   {
     path: 'actividad-chofer',
     loadChildren: () => import('./page/chofer/actividad-chofer/actividad-chofer.module').then( m => m.ActividadChoferPageModule)
+  },  {
+    path: 'cuenta-chofer',
+    loadChildren: () => import('./page/chofer/cuenta-chofer/cuenta-chofer.module').then( m => m.CuentaChoferPageModule)
   },
+
 ];
 
 @NgModule({

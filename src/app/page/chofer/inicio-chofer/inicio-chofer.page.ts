@@ -16,7 +16,7 @@ export class InicioChoferPage implements OnInit {
 
 
   irACuenta() {
-    this.router.navigate(['cuenta']);
+    this.router.navigate(['cuenta-chofer']);
   }
 
 }
