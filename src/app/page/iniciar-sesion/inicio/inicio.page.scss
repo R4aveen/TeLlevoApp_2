@@ -1,0 +1,96 @@
+.headers {
+  background-color: #fff;
+}
+.contenedors {
+background-color: #d4e6eb;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+
+  .card {
+      border-radius: 25px;
+      background-color: rgba(72, 138, 177, 0.432);
+    
+      .labeles {
+        border-radius: 25px;
+        background-color: rgba(29, 100, 141, 0);
+        size: 100%;
+        .inputo {
+          border-radius: 25px;
+          background-color: rgba(29, 100, 141, 0);
+          padding: 10px;
+          size: 100%;
+    
+          .texts {
+            border-radius: 25px;
+            size: 100%;
+            background-color: rgba(29, 100, 141, 0.007);
+          }
+        }
+      }
+    }
+
+item-native{
+  border-radius: 25px;
+  background-color: rgba(216, 220, 223, 0.671);
+
+}
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%;
+
+    
+
+    .botones {
+      margin-top: 10px;
+      width: 100%;
+      max-width: 150px; 
+      background-color: rgba(29, 100, 141, 0.671);
+    }
+  }
+
+  .logo {
+    width: 100%; 
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+  }
+
+}
+
+h5 {
+  font-family: Arial, sans-serif; 
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1; 
+  color: #333;
+}
+
+h1 {
+font-family: Arial, sans-serif; 
+font-size: 20px;
+font-weight: 700; 
+line-height: 1.2; 
+color: #333; 
+}
+
+p{
+font-family: Arial, sans-serif; 
+font-size: 18px;
+font-weight: 400;
+line-height: 1.5; 
+color: #555;
+}

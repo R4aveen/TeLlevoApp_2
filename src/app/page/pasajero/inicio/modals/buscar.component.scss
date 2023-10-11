@@ -1,0 +1,70 @@
+.container-col ion-img{
+    border-radius: 25px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .toggle-label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .toggle-button {
+    width: 60px;
+    height: 30px;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  
+  .toggle-option {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .toggle-option.active {
+    background-color: #007bff;
+  }
+
+  .toggle-label {
+    font-size: 18px;
+    color: #007bff; /* Color predeterminado de texto */
+  }
+  .toggle-label-1 {
+    
+    font-size: 18px;
+    color: #007bff; /* Color predeterminado de texto */
+    margin-top: 50px;
+    text-align: start;
+    margin-right: 50px;
+    padding-block-start: 100%;
+    
+  }
+
+.toggle-label.neutro {
+    display: none; /* Oculta la etiqueta "Neutro" (sin texto) */
+  }
+  
+  .toggle-label {
+    font-size: 18px;
+    color: #007bff; /* Color predeterminado de texto */
+  }
+  
+  .toggle-label.ion-label {
+    display: none; /* Oculta el texto por defecto del ion-toggle */
+  }
+  
+  .toggle-label.chofer::before {
+    content: "Chofer";
+    color: #007bff; /* Color del texto "Chofer" */
+  }
+  
