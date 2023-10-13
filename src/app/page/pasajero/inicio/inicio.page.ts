@@ -4,12 +4,18 @@ import Swiper from 'swiper';
 import { Router } from '@angular/router';
 
 import { ModalExampleComponent } from './modals/buscar.component';
+
+
+
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.page.html',
   styleUrls: ['./inicio.page.scss'],
 })
-export class InicioPage implements OnInit {
+export class InicioPage  {
+   
+  
+
 
   constructor(private navCtrl: NavController, private router: Router, private modalCtrl: ModalController) {}
 
@@ -19,6 +25,8 @@ export class InicioPage implements OnInit {
   irACuenta() {
     this.router.navigate(['cuenta']);
   }
+
+
 
 
 

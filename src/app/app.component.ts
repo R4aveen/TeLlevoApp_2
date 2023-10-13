@@ -9,6 +9,6 @@ export class AppComponent {
   constructor( ) {}
 
 
-
+  ngAfterViewInit(): void{}
 
 }

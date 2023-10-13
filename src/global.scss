@@ -27,6 +27,8 @@
 @import url('../src/assets/estilo/miestilo.scss');
 @import "~swiper/swiper-bundle.css";
 
+@import url("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css");
+
 .fixed-footer {
     position: fixed;
     bottom: 0;
