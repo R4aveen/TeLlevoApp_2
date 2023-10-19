@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content class="white-bg" [fullscreen]="true">
+  <div class="contenedors">
+    <div class="a">
+      <ion-card class="card">
+        <img alt="Silhouette of mountains" src="../../../assets/tellevoini.png" class="logo"/>
+        <ion-card-header>
+          <ion-card-title class="titulo">TeLlevoApp</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content class="labeles">
+          <ion-item class="inputo">
+            <ion-input class="texts" [(ngModel)]="nombre" label="" placeholder="ingrese su nombre" ></ion-input>
+          </ion-item>
+          <ion-item class="inputo">
+            <ion-input class="texts" [(ngModel)]="password" label="" placeholder="Ingrese su contraseña" type="password"></ion-input>          </ion-item>
+          <!-- 
+          <ion-item>
+            <ion-input [(ngModel)]="edad" label="" type="number" placeholder="su edad"></ion-input>
+          </ion-item>
+          -->
+        </ion-card-content>
+                <!-- 
+        <div class="contenedor">
+          <ion-button (click)="grabar()">Grabar</ion-button>
+          <ion-button (click)="listar()">Listar</ion-button>
+        </div>
+                -->
+      </ion-card>
+      <div class="contenedor">
+        <ion-button class="botones" (click)="login()">Ingresar</ion-button>
+        <h5>o desea</h5>
+        <ion-button class="botones" [routerLink]="['/registro']">Registrar</ion-button>
+        
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,18 @@
+/* Tu archivo .scss */
+.custom-avatar {
+    width: 200px; /* Ajusta el ancho y el alto según tus preferencias */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%; /* Esto hace que el avatar sea circular */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se desborde del círculo */
+  }
+  
+  .custom-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para que cubra todo el espacio del avatar sin distorsionarla */
+    object-position: center; /* Asegura que la imagen se centre vertical y horizontalmente */
+  }
+  

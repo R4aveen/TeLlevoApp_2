@@ -1,0 +1,17 @@
+<ion-tabs>
+  <div class="fixed-footer">
+
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="inicio" [class.active-tab]="isTabActive('inicio')" (click)="navigateTo('inicio')">
+      <ion-icon (click)="inicio()" name="home-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="actividad" [class.active-tab]="isTabActive('actividad')" (click)="navigateTo('actividad')">
+      <ion-icon (click)="actividad()" name="map-outline"></ion-icon>
+    </ion-tab-button>
+    <ion-tab-button tab="configuracion" [class.active-tab]="isTabActive('configuracion')" (click)="navigateTo('configuracion')">
+      <ion-icon (click)="configuracion()" name="settings-outline"></ion-icon>
+    </ion-tab-button>
+  </ion-tab-bar>
+</div>
+</ion-tabs>

@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" class="fondo">
+  <div class="burbuja" style="top: 20%; left: 10%; width: 10px; height: 10px;"></div>
+  <ion-toolbar class="fondoo">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="1">
+          <ion-avatar class="ion-align-self-start ion-padding-end" (click)="irACuenta()">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <ion-title class="ion-align-self-start letra">Actividad</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-card>
+    <ion-card-header>
+      Actividad Reciente
+    </ion-card-header>
+    
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let actividad of actividades">
+          <ion-label  (click)="abrirModal()">{{ actividad.descripcion }}</ion-label>
+          <ion-icon name="heart" slot="end" [color]="actividad.favorito ? 'danger' : 'medium'"
+            (click)="agregarFavorito(actividad)"></ion-icon>
+        </ion-item>
+      </ion-list>
+      
+    </ion-card-content>
+  </ion-card>
+
+  <ion-footer class="fixed-footer">
+    <ion-toolbar>
+      <app-tablass></app-tablass>
+    </ion-toolbar>
+  </ion-footer>
+</ion-content>
