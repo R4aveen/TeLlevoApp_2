@@ -20,7 +20,7 @@ export class RegistroPage implements OnInit {
   ) {}
 
   registrar() {
-    // Aquí puedes acceder a los valores de entrada del formulario
+
     const datosRegistro = {
       nombre: this.nombre,
       correo: this.correo,
@@ -28,7 +28,7 @@ export class RegistroPage implements OnInit {
       confirmarContrasena: this.confirmarContrasena,
     };
 
-    // Almacena los datos de registro en el servicio
+    
     this.registroService.guardarDatosRegistro(datosRegistro);
 
     // Redirige al usuario según la selección de rol
