@@ -9,10 +9,10 @@ import { DetalleActividadComponent } from './modals/detalle-actividad/detalle-ac
   styleUrls: ['./actividad.page.scss'],
 })
 export class ActividadPage {
-  actividades = [
+  actividades: any[] = [  // Aquí declaras el tipo explícitamente como un arreglo de objetos any
     { descripcion: '19-09-2023 17:50', favorito: false },
     { descripcion: '07-09-2023 13:50', favorito: true },
-    // Agrega más actividades según sea necesario
+    { descripcion: '07-09-2023 13:50', favorito: true },
   ];
 
   constructor(private modalCtrl: ModalController, private router: Router) {}
@@ -20,10 +20,9 @@ export class ActividadPage {
 
   async abrirModal() {
     const modal = await this.modalCtrl.create({
-      component: DetalleActividadComponent, // Componente modal que se abrirá
+      component: DetalleActividadComponent,
       componentProps: {
-        // Puedes pasar datos al componente modal si es necesario
-        // Por ejemplo: datosViaje: miDatoViaje
+
       },
     });
     return await modal.present();
@@ -37,6 +36,8 @@ export class ActividadPage {
   irACuenta() {
     this.router.navigate(['cuenta']);
   }
-
+  cerrarModal() {
+    this.modalCtrl.dismiss();
+  }
   
 }
