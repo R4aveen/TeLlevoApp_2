@@ -16,6 +16,25 @@ ion-button{
   height: 100%;
 }
 
+.avatar-container {
+  width: 100px; /* Ajusta el tamaño del avatar como desees */
+  height: 100px; /* Ajusta el tamaño del avatar como desees */
+  background-color: #ffffff; /* Color de fondo (blanco en este caso) */
+  border-radius: 50%; /* Hace que el fondo sea circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Oculta cualquier parte de la imagen que salga del círculo */
+}
+
+.avatar-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta la imagen al contenedor sin recortarla */
+}
+
+
+
 /* Opcional: Si deseas que el avatar tenga una forma redonda */
 ion-avatar.custom-avatar {
   border-radius: 50%; /* Esto hará que el avatar sea circular */

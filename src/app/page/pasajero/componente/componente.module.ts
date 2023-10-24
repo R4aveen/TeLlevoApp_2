@@ -8,15 +8,13 @@ import { ValoracionComponent } from './valoracion/valoracion.component';
 import { GooglemapsComponent } from './googlemaps/googlemaps.component';
 import { PanelDespegableComponent } from './panel-despegable/panel-despegable.component';
 
-import { CortarImagenComponent } from './cortar-imagen/cortar-imagen.component';
 
 @NgModule({
   declarations: [
     TablassComponent,
     ValoracionComponent,
     GooglemapsComponent,
-    PanelDespegableComponent,
-    CortarImagenComponent,
+    PanelDespegableComponent
   ],
   imports: [
     CommonModule,
@@ -26,8 +24,7 @@ import { CortarImagenComponent } from './cortar-imagen/cortar-imagen.component';
     TablassComponent,
     ValoracionComponent,
     GooglemapsComponent,
-    PanelDespegableComponent,
-    CortarImagenComponent,
+    PanelDespegableComponent
   ]
 })
 export class ComponenteModule { }
