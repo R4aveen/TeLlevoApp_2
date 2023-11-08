@@ -17,6 +17,7 @@ import { environment } from 'src/environments/environment';
 export class InicioPage implements OnInit {
 
   public map: mapbox.Map;
+
   public style = 'mapbox://styles/mapbox/streets-v11';
 
   constructor(private navCtrl: NavController, 
@@ -61,6 +62,7 @@ export class InicioPage implements OnInit {
 
 
 
+/// hola este es un comentario
 
   
 }
