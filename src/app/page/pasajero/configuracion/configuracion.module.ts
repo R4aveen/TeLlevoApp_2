@@ -12,6 +12,9 @@ import { ComponenteModule } from '../componente/componente.module';
 import { AgregarDireccionLaboralModalComponent } from './modals/agregar-direccion-laboral-modal/agregar-direccion-laboral-modal.component';
 import { AgregarDireccionParticularModalComponent } from './modals/agregar-direccion-particular-modal/agregar-direccion-particular-modal.component';
 import { EditarPerfilModalComponent } from './modals/editar-perfil-modal/editar-perfil-modal.component';
+import { FavoritosModalComponent } from './modals/favorito/favorito-modal.component';
+import { BilleteraModalComponent } from './modals/billetera/billetera-modal.component';
+
 @NgModule({
   imports: [
     ComponenteModule,
@@ -20,6 +23,12 @@ import { EditarPerfilModalComponent } from './modals/editar-perfil-modal/editar-
     IonicModule,
     ConfiguracionPageRoutingModule
   ],
-  declarations: [ConfiguracionPage, AgregarDireccionLaboralModalComponent, AgregarDireccionParticularModalComponent, EditarPerfilModalComponent]
+  declarations: [ConfiguracionPage, 
+                AgregarDireccionLaboralModalComponent, 
+                AgregarDireccionParticularModalComponent, 
+                EditarPerfilModalComponent,
+                FavoritosModalComponent,
+                BilleteraModalComponent,
+              ]
 })
 export class ConfiguracionPageModule {}

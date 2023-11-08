@@ -1,20 +1,80 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-title>Editar Perfil</ion-title>
-      <ion-buttons slot="end">
-        <ion-button (click)="cerrarModal()">
-          <ion-icon name="close"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    </ion-toolbar>
-  </ion-header>
-  
-  <ion-content>
+  <ion-toolbar>
+    <ion-title>Editar Perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-    <ion-item>
-      <ion-label position="stacked">Nombre</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
-  
-    <ion-button expand="block" (click)="guardarCambios()">Guardar Cambios</ion-button>
-  </ion-content>
+<ion-content class="detalle-content">
+
+  <ion-grid class="detalle-container">
+
+    <ion-row>
+      <ion-col size="12" class="custom-avatar-column">
+        <ion-avatar class="custom-avatar">
+          <label for="fileInput">
+            <img
+              alt="Silhouette of a person's head"
+              [src]="croppedImage || 'https://ionicframework.com/docs/img/demos/avatar.svg'"
+            />
+          </label>
+        </ion-avatar>
+        <input
+          type="file"
+          id="fileInput"
+          (change)="handleFileInput($event)"
+          style="display: none;"
+        />
+      </ion-col>
+    </ion-row>
+    <!-- Fila 1: Nombre -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked"></ion-label>
+          <ion-input placeholder="nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Fila 2: Apellido -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked"></ion-label>
+          <ion-input placeholder="apellido"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Fila 3: Correo -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked"></ion-label>
+          <ion-input placeholder="correo"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+    <!-- Fila 4: Teléfono -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-item>
+          <ion-label position="stacked"></ion-label>
+          <ion-input placeholder="telefono"  type="tel"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Botón para guardar cambios -->
+<ion-footer>
+  <ion-button expand="block" (click)="guardarCambios()">Guardar Cambios</ion-button>
+</ion-footer>
+
+</ion-content>

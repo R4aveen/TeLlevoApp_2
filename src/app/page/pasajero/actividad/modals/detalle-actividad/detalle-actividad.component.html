@@ -1,44 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="fondo" style="height: max-content;">
-      <div style="margin: 25%;">
-        <h2>Información General</h2>
-        <ul>
-            <li>
-                <label>Fecha y Hora:</label>
-                <span> 19 de septiembre de 2023, 17:50</span>
-            </li>
-            <li>
-                <label>Origen:</label>
-                <span>Duoc UC Puente Alto</span>
-            </li>
-            <li>
-                <label>Destino:</label>
-                <span>Las nieves 1570</span>
-            </li>
-        </ul>
-        
-        <h2>Detalles Adicionales</h2>
-        <ul>
-            <li>
-                <label>Número de Pasajeros:</label>
-                <span>4</span>
-            </li>
-            <li>
-                <label>Precio por Pasajero:</label>
-                <span>$2.500</span>
-            </li>
-            <li>
-                <label>Calificación del Viaje:</label>
-                <span>4.5 estrellas</span>
-            </li>
-        </ul>
-        
-      </div>
-    </div>
-    <div class="cerrar-modal-container">
-      <button class="cerrar-modal" (click)="cerrarModal()">Cerrar</button>
-    </div>
-  </div>
-</div>
+<ion-content class="detalle-content">
+  <ion-grid class="detalle-container">
+    <ion-row>
+      <ion-col size="12">
+        <div class="info-section">
+          <h2>Información General</h2>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Fecha y Hora:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>19 de septiembre de 2023, 17:50</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Origen:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>Duoc UC Puente Alto</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Destino:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>Las nieves 1570</span>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <div class="info-section">
+          <h2>Detalles Adicionales</h2>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Número de Pasajeros:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>4</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Precio por Pasajero:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>$2.500</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Calificación del Viaje:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>4.5 estrellas</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <div class="image-container">
+                <!-- Agrega aquí tu imagen -->
+                <img src="https://www.google.com/maps/d/thumbnail?mid=1z-8Ns2OiN41oBARmMV9e-1Q1Qtg&hl=es" alt="Imagen Detalle">
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>

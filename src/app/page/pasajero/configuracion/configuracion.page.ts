@@ -4,6 +4,8 @@ import { EditarPerfilModalComponent } from './modals/editar-perfil-modal/editar-
 import { AgregarDireccionParticularModalComponent } from './modals/agregar-direccion-particular-modal/agregar-direccion-particular-modal.component';
 import { AgregarDireccionLaboralModalComponent } from './modals/agregar-direccion-laboral-modal/agregar-direccion-laboral-modal.component';
 import { Router } from '@angular/router';
+import { FavoritosModalComponent } from './modals/favorito/favorito-modal.component';
+import { BilleteraModalComponent } from './modals/billetera/billetera-modal.component';
 
 @Component({
   selector: 'app-configuracion',
@@ -14,10 +16,12 @@ import { Router } from '@angular/router';
 export class ConfiguracionPage {
   
   constructor(private modalCtrl: ModalController, private router: Router) {}
+  
+  ///////// Metodos para los modals ///////////////
+
   async abrirEditarPerfilModal() {
     const modal = await this.modalCtrl.create({
       component: EditarPerfilModalComponent,
-      // Puedes pasar parámetros si es necesario
     });
     return await modal.present();
   }
@@ -25,7 +29,6 @@ export class ConfiguracionPage {
   async abrirAgregarDireccionParticularModal() {
     const modal = await this.modalCtrl.create({
       component: AgregarDireccionParticularModalComponent,
-      // Puedes pasar parámetros si es necesario
     });
     return await modal.present();
   }
@@ -33,10 +36,30 @@ export class ConfiguracionPage {
   async abrirAgregarDireccionLaboralModal() {
     const modal = await this.modalCtrl.create({
       component: AgregarDireccionLaboralModalComponent,
-      // Puedes pasar parámetros si es necesario
     });
     return await modal.present();
   }
+
+
+
+  async abrirFavoritoModal(){
+    const modal = await this.modalCtrl.create({
+      component: FavoritosModalComponent,
+    });
+    return await modal.present();
+  }
+
+  async abrirBilleteraModal(){
+    const modal = await this.modalCtrl.create({
+      component: BilleteraModalComponent,
+    });
+    return await modal.present();
+  }
+
+
+  //////// Fin de metodos para modals /////////
+
+  
   irACuenta() {
     this.router.navigate(['cuenta']);
   }

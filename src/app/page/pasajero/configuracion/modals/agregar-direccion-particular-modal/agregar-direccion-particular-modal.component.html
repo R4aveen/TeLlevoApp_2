@@ -9,12 +9,44 @@
     </ion-toolbar>
   </ion-header>
   
-  <ion-content>
-    
-    <ion-item>
-      <ion-label position="stacked">Dirección</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+  <ion-content class="detalle-content">
+
+    <ion-grid class="detalle-container">
   
-    <ion-button expand="block" (click)="agregarDireccionParticular()">Agregar Dirección</ion-button>
-  </ion-content>
+      <ion-row>
+        <ion-col size="12" class="custom-avatar-column">
+          <ion-avatar class="custom-avatar">
+            <label for="fileInput">
+              <img
+                alt="Silhouette of a person's head"
+                src="https://ionicframework.com/docs/img/demos/avatar.svg"
+              />
+            </label>
+          </ion-avatar>
+        </ion-col>
+      </ion-row>
+      <!-- Fila 1: Nombre -->
+      
+      <ion-row>
+        <ion-col size="12">
+          <h2 style="text-align: center; color: aliceblue;">Agregar direccion</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-item>
+            <ion-label position="stacked"></ion-label>
+            <ion-input placeholder="Nombre de Direccion"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+  
+
+    </ion-grid>
+  
+    <!-- Botón para guardar cambios -->
+  <ion-footer>
+    <ion-button expand="block" (click)="agregarDireccionParticular()">Guardar Direccion</ion-button>
+  </ion-footer>
+  

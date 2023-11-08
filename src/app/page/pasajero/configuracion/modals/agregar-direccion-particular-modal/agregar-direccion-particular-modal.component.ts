@@ -17,4 +17,6 @@ export class AgregarDireccionParticularModalComponent {
     // Lógica para agregar dirección particular
     this.modalCtrl.dismiss({ direccionAgregada: true });
   }
+
+  
 }

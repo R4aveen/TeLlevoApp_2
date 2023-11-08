@@ -28,7 +28,6 @@ import { environment } from 'src/environments/environment';
             AppRoutingModule,
             ComponenteModule,
             ComponentecModule,
-            AngularFireModule.initializeApp(environment.firebaseConfig), /// SE INICIALIZA DESDE LA CARPETA COMPACTA DE FIRE NO FIRESTORE
             AngularFireAuthModule,
 
           ],

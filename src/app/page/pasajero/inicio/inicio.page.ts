@@ -20,6 +20,8 @@ export class InicioPage implements OnInit {
 
   public style = 'mapbox://styles/mapbox/streets-v11';
 
+  private panelAbierto = true; // Variable para rastrear el estado del panel
+
   constructor(private navCtrl: NavController, 
               private router: Router,
                private modalCtrl: ModalController,
@@ -51,17 +53,30 @@ export class InicioPage implements OnInit {
     const marker = new mapbox.Marker()
             .setLngLat([ -70.57901364994967, -33.5977186102555])
             .addTo(this.map);
+
+            this.map.addControl(new mapbox.NavigationControl());
   }
 
-
-
-
+  
   irACuenta() {
     this.router.navigate(['cuenta']);
   }
 
 
 
+  togglePanel() {
+    this.panelAbierto = !this.panelAbierto;
+
+    // Realiza las acciones necesarias para abrir o cerrar el panel desplegable
+    const panelDespegable = document.querySelector('app-panel-despegable'); // Reemplaza con el selector correcto
+    if (panelDespegable) {
+      if (this.panelAbierto) {
+        panelDespegable.classList.add('abierto');
+      } else {
+        panelDespegable.classList.remove('abierto');
+      }
+    }
+  }
 /// hola este es un comentario
 
   

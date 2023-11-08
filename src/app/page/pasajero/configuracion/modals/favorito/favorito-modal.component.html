@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="custom-toolbar">
+    <ion-title>Favoritos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrarModal()">
+        <ion-icon name="close" class="custom-icon"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="custom-content">
+  <ion-grid class="detalle-container">
+    <ion-row>
+      <ion-col size="12">
+        <ng-container *ngIf="'favoritos'">
+          <ion-list *ngIf="listaFavoritos.length > 0">
+            <ion-item *ngFor="let favorito of listaFavoritos" class="custom-item">
+              {{ favorito.nombre }}
+              <ion-button [id]="'present-alert-' + favorito.id" slot="end">Repetir</ion-button>
+              <ion-alert
+                [trigger]="'present-alert-' + favorito.id"
+                header="¿Deseas repetir el viaje?"
+                message="Puede estar sujeto a cobros"
+                [buttons]="alertButtons"
+                (ionAlertDidDismiss)="iniciarViaje()"
+              ></ion-alert>
+              
+            </ion-item>
+          </ion-list>
+          <ion-text *ngIf="listaFavoritos.length === 0" class="ion-margin-top custom-text">
+            Aún no hay favoritos
+          </ion-text>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

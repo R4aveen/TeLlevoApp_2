@@ -1,15 +1,67 @@
-.tamano{
-    max-width: 50%;
+.detalle-content {
+  --background: #5D8D9C; /* Color de fondo personalizable */
+  background-color: var(--background);
 }
-.cerrar-modal { 
-    background-color: #1d3c43; 
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 15px; 
-  }
 
-  .cerrar-modal-container {
-    display: flex;
-    justify-content: center;
-  }
+.detalle-container {
+  background-color: #cbe9f3; /* Fondo del container */
+  border: 1px solid #ccc; /* Borde del container */
+  padding: 16px; /* Espaciado interior del container */
+  margin: 16px; /* Margen exterior del container */
+  border-radius: 8px; /* Bordes redondeados del container */
+  color: #131212;
+}
+
+.info-section {
+  margin-bottom: 16px; /* Espaciado entre secciones de información */
+}
+
+.info-row {
+  border-bottom: 1px solid #131212; /* Borde inferior de cada fila de información */
+  padding: 8px 0; /* Espaciado vertical dentro de cada fila */
+}
+
+label {
+  font-weight: bold;
+  color: #131212;
+}
+
+span {
+  color: #131212;
+}
+
+.image-container {
+  margin: 16px auto; /* Espaciado entre la información y la imagen */
+  max-width: 100%;
+  width: 300px; /* Ancho fijo */
+  height: 200px; /* Alto fijo para una relación de aspecto rectangular (3:2 en este caso) */
+  text-align: center; /* Centrar la imagen */
+  overflow: hidden; /* Cortar la imagen si es necesario para que quepa en el contenedor rectangular */
+  position: relative; /* Necesario para el posicionamiento de la imagen */
+}
+
+.image-container img {
+  width: 100%; /* Asegurarse de que la imagen ocupe todo el contenedor rectangular */
+  height: 100%; /* Asegurarse de que la imagen ocupe todo el alto del contenedor */
+  object-fit: cover; /* Ajustar la imagen manteniendo la relación de aspecto y recortando si es necesario */
+}
+
+.cerrar-modal-container {
+  margin-top: 16px; /* Espaciado superior del botón Cerrar */
+}
+
+/* Estilos para los encabezados h2 */
+.info-section h2 {
+  background-color: white; /* Fondo blanco para los h2 */
+  color: #131212; /* Texto en color negro */
+  border-radius: 25px; /* Borde redondeado */
+  padding: 8px 16px; /* Espaciado interno */
+  margin-bottom: 16px; /* Espaciado inferior */
+  text-align: center; /* Centrar el texto */
+}
+
+.cerrar-modal-container {
+  margin-top: 16px; /* Espaciado superior del botón Cerrar */
+  margin-bottom: 36px;
+  
+}

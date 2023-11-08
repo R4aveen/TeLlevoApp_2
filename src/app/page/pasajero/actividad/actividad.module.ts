@@ -9,6 +9,7 @@ import { ActividadPageRoutingModule } from './actividad-routing.module';
 import { ActividadPage } from './actividad.page';
 
 import { ComponenteModule } from '../componente/componente.module';
+import { DetalleActividadComponent } from './modals/detalle-actividad/detalle-actividad.component';
 
 @NgModule({
   imports: [
@@ -18,6 +19,6 @@ import { ComponenteModule } from '../componente/componente.module';
     IonicModule,
     ActividadPageRoutingModule
   ],
-  declarations: [ActividadPage]
+  declarations: [ActividadPage, DetalleActividadComponent]
 })
 export class ActividadPageModule {}
