@@ -1,0 +1,65 @@
+<ion-header class="fondo">
+  <ion-toolbar class="fondo">
+    <ion-title class="ion-align-self-start letra" style="font-size: 20px;"><ion-button (click)="cerrarModal()" style="padding: 5%;">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>Registrando chofer</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="fondo">
+<ion-card-content >
+  <ion-item>
+    <ion-label position="floating">Usuario</ion-label>
+    <ion-input class="texts" [(ngModel)]="usuario" name="usuario" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="nombre" name="nombre" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Apellido</ion-label>
+        <ion-input [(ngModel)]="apellido" name="apellido" type="text"></ion-input>
+        </ion-item>
+  <ion-item>
+    <ion-label position="floating">Correo Electrónico</ion-label>
+    <ion-input [(ngModel)]="correo" name="correo" type="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Número Telefónico</ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+          <ion-item>
+            <ion-label position="floating">Código</ion-label>
+            <ion-input value="+56" disabled class="cod"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Número</ion-label>
+            <ion-input [(ngModel)]="telefono" name="telefono" type="tel"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Patente vehiculo</ion-label>
+    <ion-input [(ngModel)]="patente" name="patente" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input [(ngModel)]="direccion" name="direccion" type="text"></ion-input>
+      </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="contrasena" name="contrasena" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar contraseña</ion-label>
+      <ion-input [(ngModel)]="confirmarContrasena" name="confirmarContrasena" type="password"></ion-input>
+    </ion-item>
+</ion-card-content>
+
+
+<ion-button expand="block" (click)="grabar()">Registrar</ion-button>
+</ion-content>

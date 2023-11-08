@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RegistroService } from './registro.service';
+import { FormChoferComponent } from './modals/form-chofer/form-chofer.component';
+import { FormPasajeroComponent } from './modals/form-pasajero/form-pasajero.component';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro',
@@ -16,37 +19,28 @@ export class RegistroPage implements OnInit {
 
   constructor(
     private registroService: RegistroService,
-    private router: Router
+    private router: Router,
+    private modalCtrl: ModalController,
   ) {}
 
-  registrar() {
-    // Aquí puedes acceder a los valores de entrada del formulario
-    const datosRegistro = {
-      nombre: this.nombre,
-      correo: this.correo,
-      contrasena: this.contrasena,
-      confirmarContrasena: this.confirmarContrasena,
-    };
 
-    // Almacena los datos de registro en el servicio
-    this.registroService.guardarDatosRegistro(datosRegistro);
-
-    // Redirige al usuario según la selección de rol
-    if (this.rol === 'custom') {
-      // Redirige a la página de inicio para "Pasajero"
-      this.router.navigate(['/inicio']);
-    } else if (this.rol === 'custom-checked') {
-      // Redirige a la página de inicio-chofer para "Chofer"
-      this.router.navigate(['/inicio-chofer']);
-    }
+  async abrirFormularioChofer() {
+    const modal = await this.modalCtrl.create({
+      component: FormChoferComponent,
+    });
+    return await modal.present();
   }
-
-  verDatosRegistrados() {
-    const datos = this.registroService.getDatosRegistro();
-    console.log('Datos registrados:', datos);
+  async abrirFormularioPasajero() {
+    const modal = await this.modalCtrl.create({
+      component: FormPasajeroComponent,
+    });
+    return await modal.present();
+  }
+  inicio(){
+    this.router.navigate(['iniciar']);
   }
 
   ngOnInit() {
-    // Código de inicialización si es necesario
+    
   }
 }

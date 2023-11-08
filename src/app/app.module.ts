@@ -15,7 +15,7 @@ import { ComponentecModule } from './page/chofer/componentec/componentec.module'
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
-
+import { HttpClientModule } from '@angular/common/http';
 //////////// FIREBASE //////////////
 //import { AngularFireModule } from '@angular/fire/compat';
 //import { AngularFireAuthModule } from '@angular/fire/compat/auth';
@@ -29,6 +29,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
             AppRoutingModule,
             ComponenteModule,
             ComponentecModule,
+            HttpClientModule,
             //AngularFireModule.initializeApp(environment.firebaseConfig), /// SE INICIALIZA DESDE LA CARPETA COMPACTA DE FIRE NO FIRESTORE
             //AngularFireAuthModule,
 
