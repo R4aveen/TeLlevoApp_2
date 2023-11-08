@@ -1,6 +1,6 @@
-<ion-header [translucent]="true" class="fondo">
+<ion-header [translucent]="true" >
   <div class="burbuja" style="top: 20%; left: 10%; width: 10px; height: 10px;"></div>
-  <ion-toolbar class="fondoo">
+  <ion-toolbar >
     <ion-grid>
       <ion-row>
         <ion-col size="2">
@@ -19,9 +19,15 @@
 
 <div style="height: 56px;"></div>
 
+<ion-content [fullscreen]="true">
 
 
-<ion-content [fullscreen]="true" class="fondo">
+  <div class="contenedor">
+    <div id="mapa-box"></div>
+  </div>
+
+
+
 
   <div class="container">
       <app-panel-despegable></app-panel-despegable>

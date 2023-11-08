@@ -1,44 +1,38 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar class="custom-toolbar">
     <ion-title>Favoritos</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="cerrarModal()">
-        <ion-icon name="close"></ion-icon>
+        <ion-icon name="close" class="custom-icon"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-  <ion-toolbar>
-    <ion-segment [(ngModel)]="selectedTab">
-      <ion-segment-button value="all">
-        <ion-label>All</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="favorites">
-        <ion-label>Favorites</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-segment [(ngModel)]="selectedTab">
-    <!-- ... -->
-  </ion-segment>
-
-  <ng-container *ngIf="selectedTab === 'all'">
-    <ion-list *ngIf="listaElementos.length > 0">
-      <ion-item *ngFor="let elemento of listaElementos">
-        {{ elemento.nombre }}
-      </ion-item>
-    </ion-list>
-    <ion-text *ngIf="listaElementos.length === 0">Aún no hay ningún viaje</ion-text>
-  </ng-container>
-
-  <ng-container *ngIf="selectedTab === 'favorites'">
-    <ion-list *ngIf="listaFavoritos.length > 0">
-      <ion-item *ngFor="let favorito of listaFavoritos">
-        {{ favorito.nombre }}
-      </ion-item>
-    </ion-list>
-    <ion-text *ngIf="listaFavoritos.length === 0">Aún no hay favoritos</ion-text>
-  </ng-container>
+<ion-content class="custom-content">
+  <ion-grid class="detalle-container">
+    <ion-row>
+      <ion-col size="12">
+        <ng-container *ngIf="'favoritos'">
+          <ion-list *ngIf="listaFavoritos.length > 0">
+            <ion-item *ngFor="let favorito of listaFavoritos" class="custom-item">
+              {{ favorito.nombre }}
+              <ion-button [id]="'present-alert-' + favorito.id" slot="end">Repetir</ion-button>
+              <ion-alert
+                [trigger]="'present-alert-' + favorito.id"
+                header="¿Deseas repetir el viaje?"
+                message="Puede estar sujeto a cobros"
+                [buttons]="alertButtons"
+                (ionAlertDidDismiss)="iniciarViaje()"
+              ></ion-alert>
+              
+            </ion-item>
+          </ion-list>
+          <ion-text *ngIf="listaFavoritos.length === 0" class="ion-margin-top custom-text">
+            Aún no hay favoritos
+          </ion-text>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

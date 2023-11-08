@@ -1,18 +1,18 @@
-/* Estilos personalizados para los botones */
+
 .custom-button {
   display: flex;
-  justify-content: flex-start; /* Colocar icono al principio */
-  align-items: center; /* Centrar verticalmente el contenido */
-  text-align: right; /* Alinear texto a la izquierda */
-  margin-bottom: 8px; /* Espaciado inferior entre botones */
+  justify-content: flex-start;
+  align-items: center; 
+  text-align: right; 
+  margin-bottom: 8px; 
 }
 
 .button-text {
-  margin-left: 10px; /* Espaciado entre el icono y el texto */
-  font-weight: 500; /* Estilo de fuente del texto */
+  margin-left: 10px; 
+  font-weight: 500; 
 }
 
-/* Agrega cualquier otro estilo que desees aquí */
+
 ion-button{
     --background: rgba(44, 168, 193, 0.922);
 }

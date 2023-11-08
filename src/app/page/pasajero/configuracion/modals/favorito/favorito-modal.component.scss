@@ -1,0 +1,14 @@
+.custom-content{
+  --background: #5D8D9C; 
+  background-color: var(--background);
+}
+
+.detalle-container {
+  background-color: #cbe9f3; /* Fondo del container */
+  border: 1px solid #ccc; /* Borde del container */
+  padding: 16px; /* Espaciado interior del container */
+  margin: 16px; /* Margen exterior del container */
+  border-radius: 8px; /* Bordes redondeados del container */
+  color: #131212;
+}
+

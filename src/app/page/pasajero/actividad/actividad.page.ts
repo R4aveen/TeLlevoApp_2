@@ -14,6 +14,7 @@ export class ActividadPage {
     { descripcion: '07-09-2023 13:50', favorito: true },
     { descripcion: '07-09-2023 13:50', favorito: true },
   ];
+  
 
   constructor(private modalCtrl: ModalController, private router: Router) {}
 

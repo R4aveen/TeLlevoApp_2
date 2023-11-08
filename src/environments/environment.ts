@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  ApiKeyGoogleMaps: "AIzaSyBk8MOJ18mV_JU898qJFgBuzuLjjLfXCf4",
   firebaseConfig : {
 
     apiKey: "AIzaSyChhDfwy4DJAgSFyEx2Ei_rhLl4GO88R-U",
@@ -20,7 +21,8 @@ export const environment = {
   
     measurementId: "G-LLTP5E1Q0C"
   
-  }
+  },
+  TOKEN:'pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw',
   
 };
 

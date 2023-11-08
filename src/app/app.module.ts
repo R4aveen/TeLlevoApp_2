@@ -21,6 +21,12 @@ import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { environment } from 'src/environments/environment';
 
 
+
+/** Liberrias  */
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule,
@@ -30,9 +36,10 @@ import { environment } from 'src/environments/environment';
             ComponentecModule,
             AngularFireModule.initializeApp(environment.firebaseConfig), /// SE INICIALIZA DESDE LA CARPETA COMPACTA DE FIRE NO FIRESTORE
             AngularFireAuthModule,
-
+            HttpClientModule
           ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [Geolocation,
+              { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
