@@ -1,3 +1,8 @@
+#map { height: 180px; }
+
+
+
+
 
 .wrapper {
     display: flex;
@@ -77,9 +82,31 @@
   
 
   ion-content.fondo {
-    --background: url('https://www.google.com/maps/d/thumbnail?mid=1z-8Ns2OiN41oBARmMV9e-1Q1Qtg&hl=es');
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+
+  #mapa-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .map{
+    width: 100%;
+    height: 100% !important;
+  }
+  #map-container{
+    height: 100vh;
+    width: auto;
+  }
+
+  html, body{
+    width: 100%;
+    height: 100%;
+  }
+  
+
+  
