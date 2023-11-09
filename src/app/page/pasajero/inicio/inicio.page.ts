@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { ModalExampleComponent } from './modals/buscar.component';
 
 import * as mapbox from 'mapbox-gl';
+
 import { environment } from 'src/environments/environment';
 
 
@@ -52,7 +53,7 @@ export class InicioPage implements OnInit {
     });
     const marker = new mapbox.Marker()
             .setLngLat([ -70.57901364994967, -33.5977186102555])
-            .addTo(this.map);
+            .addTo(this.map) ;
 
             this.map.addControl(new mapbox.NavigationControl());
   }
