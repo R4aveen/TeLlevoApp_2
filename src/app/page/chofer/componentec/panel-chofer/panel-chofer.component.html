@@ -1,0 +1,83 @@
+<ion-content [fullscreen]="true" class="custom-panel">
+  <ion-header [translucent]="true" class="custom-header">
+    <div class="custom-bubble"></div>
+    <ion-toolbar class="custom-toolbar">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3 class="titulo">Crear viaje</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Contenido de tu panel deslizable -->
+  <div class="custom-container">
+    
+    <!-- Columna 1 -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="custom-history">
+            <h2 class="custom-text">Tu calificación</h2>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+            <ion-icon name="star" class="star"></ion-icon>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Columna 2 -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="custom-history">
+            <h5 class="custom-text">Direcciones del viaje</h5>
+            <ion-button expand="full" class="custom-button custom-bg-color">
+              <ion-icon name="car-sport-outline" slot="start"></ion-icon>
+              <span class="custom-button-text">Desde:</span>
+            </ion-button>
+            <ion-button expand="full" class="custom-button custom-bg-color">
+              <ion-icon name="car-sport-outline" slot="start"></ion-icon>
+              <span class="custom-button-text">Hasta:</span>
+            </ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="custom-history">
+            <ion-input style="color: black;" label="Capacidad de pasajeros:" placeholder="1-4" ></ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="custom-history">
+            <ion-input style="color: black;" label="Precio: $" placeholder="Ingrese costo del pasaje: " ></ion-input>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="custom-history">
+            <ion-button expand="full">GENERAR VIAJE</ion-button>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>

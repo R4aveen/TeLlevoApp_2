@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="fondoo" >
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-title class="ion-align-self-start letra" style="font-size: 30px;   text-align: center;">Registrar</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+<ion-content class="fondo">
+
+  <ion-title class="ion-align-self-start letra" style="font-size: 30px; text-align: center; margin-top: 40px;">Como chofer</ion-title>
+  <ion-button class="large-button" (click)="abrirFormularioChofer()">
+    <ion-icon name="car" style="font-size: 50px;"></ion-icon>
+  </ion-button>
+
+  <ion-title class="ion-align-self-start letra" style="font-size: 30px; text-align: center; margin-top: 100px;">Como pasajero</ion-title>
+  <ion-button class="large-button" (click)="abrirFormularioPasajero()">
+    <ion-icon name="person" style="font-size: 50px;"></ion-icon>
+  </ion-button>
+  <br><br><br><br><br><br><br><br>
+  <div><ion-button expand="block" color="danger" (click)="inicio()" >Volver</ion-button></div>
+
+</ion-content>

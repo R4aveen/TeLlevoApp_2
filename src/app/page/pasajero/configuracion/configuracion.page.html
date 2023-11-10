@@ -1,0 +1,126 @@
+<ion-header [translucent]="true" class="fondo">
+  <div class="burbuja" style="top: 20%; left: 10%; width: 10px; height: 10px;"></div>
+  <ion-toolbar class="fondoo">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+          <ion-avatar class="ion-align-self-start ion-padding-end" (click)="irACuenta()">
+            <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+          <ion-title class="ion-align-self-start letra">Configuracion</ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-footer class="fixed-footer">
+  <ion-toolbar>
+    <app-tablass></app-tablass>
+  </ion-toolbar>
+</ion-footer>
+<ion-content [fullscreen]="true" class="fondo">
+  <ion-content [fullscreen]="true" class="fondo">
+    <ion-grid>
+      <!-- Fila 1 -->
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="abrirEditarPerfilModal()">
+          <ion-col size="1">
+            <ion-icon name="person"></ion-icon>
+          </ion-col> 
+          <ion-col size="11">
+            <span class="button-text">Editar Perfil</span>
+          </ion-col>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+  
+      <!-- Fila 2 -->
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="abrirAgregarDireccionParticularModal()">
+            <ion-col size="1">
+              <ion-icon name="home"></ion-icon>
+            </ion-col> 
+            <ion-col size="11">
+              <span class="button-text">Direccion Particular</span>
+            </ion-col>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+  
+      <!-- Fila 3 -->
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="abrirAgregarDireccionLaboralModal()">
+            <ion-col size="1">
+              <ion-icon name="briefcase"></ion-icon>
+            </ion-col> 
+            <ion-col size="11">
+              <span class="button-text">Direccion Laboral</span>
+            </ion-col>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="abrirCirculoModal()">
+            <ion-col size="1">
+              <ion-icon name="accessibility"></ion-icon>
+            </ion-col> 
+            <ion-col size="11">
+              <span class="button-text">Circulo de confianza</span>
+            </ion-col>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="abrirFavoritoModal()">
+            <ion-col size="1">
+              <ion-icon name="heart"></ion-icon>
+            </ion-col> 
+            <ion-col size="11">
+              <span class="button-text">Favoritos</span>
+            </ion-col>          
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" (click)="abrirBilleteraModal()">
+            <ion-col size="1">
+              <ion-icon name="wallet"></ion-icon>
+            </ion-col> 
+            <ion-col size="11">
+              <span class="button-text">Billetera</span>
+            </ion-col>          
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col size="12">
+          <ion-button expand="block" color="danger">
+            <ion-col size="1">
+              <ion-icon name="skull"></ion-icon>
+            </ion-col> 
+            <ion-col size="11">
+              <span class="button-text">Borrar Cuenta</span>
+            </ion-col>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-content>
+  
+
+</ion-content>
