@@ -12,8 +12,10 @@ import { ComponenteModule } from '../componente/componente.module';
 import { AgregarDireccionLaboralModalComponent } from './modals/agregar-direccion-laboral-modal/agregar-direccion-laboral-modal.component';
 import { AgregarDireccionParticularModalComponent } from './modals/agregar-direccion-particular-modal/agregar-direccion-particular-modal.component';
 import { EditarPerfilModalComponent } from './modals/editar-perfil-modal/editar-perfil-modal.component';
+import { CirculoModalComponent } from './modals/circulo/circulo-modal.component';
 import { FavoritosModalComponent } from './modals/favorito/favorito-modal.component';
 import { BilleteraModalComponent } from './modals/billetera/billetera-modal.component';
+import { SwiperComponent } from './modals/circulo/swiper/swiper.component';
 
 @NgModule({
   imports: [
@@ -27,8 +29,10 @@ import { BilleteraModalComponent } from './modals/billetera/billetera-modal.comp
                 AgregarDireccionLaboralModalComponent, 
                 AgregarDireccionParticularModalComponent, 
                 EditarPerfilModalComponent,
+                CirculoModalComponent,
                 FavoritosModalComponent,
                 BilleteraModalComponent,
+                SwiperComponent
               ]
 })
 export class ConfiguracionPageModule {}

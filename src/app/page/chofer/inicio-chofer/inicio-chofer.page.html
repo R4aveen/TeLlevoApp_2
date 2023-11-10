@@ -14,14 +14,16 @@
       </ion-row>
     </ion-grid>
   </ion-toolbar>
+  <ion-icon name="arrow-down" (click)="togglePanel()" class="icono-flecha"></ion-icon>
 </ion-header>
 
+<ion-content [fullscreen]="true">
 
-<div style="height: 56px;"></div>
+  <div id="map-container">
 
-
-
-<ion-content [fullscreen]="true" class="fondo">
+    <div class="map" id="mapa-box" tabindex="0">
+    </div>
+  </div>
 
   <div class="container">
     <app-panel-chofer></app-panel-chofer>

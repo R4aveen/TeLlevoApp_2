@@ -1,11 +1,6 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Detalle</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="cerrarModal()">
-        <ion-icon name="close"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -71,19 +66,17 @@
               <span>4.5 estrellas</span>
             </ion-col>
           </ion-row>
-          <ion-row>
-            <ion-col>
-              <div class="image-container">
-                <!-- Agrega aquí tu imagen -->
-                <img src="https://www.google.com/maps/d/thumbnail?mid=1z-8Ns2OiN41oBARmMV9e-1Q1Qtg&hl=es" alt="Imagen Detalle">
-              </div>
-            </ion-col>
-          </ion-row>
         </div>
       </ion-col>
     </ion-row>
   </ion-grid>
 
+  <div class="image-container">
+    <!-- Agrega aquí tu imagen -->
+    <img src="https://www.google.com/maps/d/thumbnail?mid=1z-8Ns2OiN41oBARmMV9e-1Q1Qtg&hl=es" alt="Imagen Detalle">
+  </div>
 
-
+  <div class="cerrar-modal-container">
+    <ion-button expand="block" (click)="cerrarModal()">Cerrar</ion-button>
+  </div>
 </ion-content>

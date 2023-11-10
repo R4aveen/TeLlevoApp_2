@@ -4,6 +4,7 @@ import { EditarPerfilModalComponent } from './modals/editar-perfil-modal/editar-
 import { AgregarDireccionParticularModalComponent } from './modals/agregar-direccion-particular-modal/agregar-direccion-particular-modal.component';
 import { AgregarDireccionLaboralModalComponent } from './modals/agregar-direccion-laboral-modal/agregar-direccion-laboral-modal.component';
 import { Router } from '@angular/router';
+import { CirculoModalComponent } from './modals/circulo/circulo-modal.component';
 import { FavoritosModalComponent } from './modals/favorito/favorito-modal.component';
 import { BilleteraModalComponent } from './modals/billetera/billetera-modal.component';
 
@@ -40,7 +41,12 @@ export class ConfiguracionPage {
     return await modal.present();
   }
 
-
+  async abrirCirculoModal(){
+    const modal = await this.modalCtrl.create({
+      component: CirculoModalComponent,
+    });
+    return await modal.present();
+  }
 
   async abrirFavoritoModal(){
     const modal = await this.modalCtrl.create({

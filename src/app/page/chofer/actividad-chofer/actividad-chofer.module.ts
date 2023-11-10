@@ -10,6 +10,8 @@ import { ActividadChoferPage } from './actividad-chofer.page';
 
 import { ComponentecModule } from '../componentec/componentec.module';
 
+import { DetalleActividadComponent } from './modals/detalle-actividad/detalle-actividad.component';
+
 @NgModule({
   imports: [
     ComponentecModule,
@@ -18,6 +20,6 @@ import { ComponentecModule } from '../componentec/componentec.module';
     IonicModule,
     ActividadChoferPageRoutingModule
   ],
-  declarations: [ActividadChoferPage,]
+  declarations: [ActividadChoferPage, DetalleActividadComponent]
 })
 export class ActividadChoferPageModule {}

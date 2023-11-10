@@ -25,7 +25,6 @@
   .custom-header {
     background-color: #f0f0f0;
     z-index: 1; /* Asegura que la barra de búsqueda esté por encima del contenido deslizable */
-    position: static;
   }
   
   .custom-bubble {
@@ -46,7 +45,6 @@
     background-color: #f5f5f5; /* Color de fondo del contenedor */
     border-radius: 10px; /* Borde redondeado */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    scroll-snap-type: initial;
   }
   
   

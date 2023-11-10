@@ -60,9 +60,19 @@ const routes: Routes = [
   {
     path: 'actividad-chofer',
     loadChildren: () => import('./page/chofer/actividad-chofer/actividad-chofer.module').then( m => m.ActividadChoferPageModule)
-  },  {
+  },
+  {
     path: 'cuenta-chofer',
     loadChildren: () => import('./page/chofer/cuenta-chofer/cuenta-chofer.module').then( m => m.CuentaChoferPageModule)
+  },
+  
+  {
+    path: 'configuracion-chofer',
+    loadChildren: () => import('./page/chofer/configuracion-chofer/configuracion-chofer.module').then( m => m.ConfiguracionChoferPageModule)
+  },
+  {
+    path: 'prueba-apidjango',
+    loadChildren: () => import('./page/prueba-apidjango/prueba-apidjango.module').then( m => m.PruebaAPIDjangoPageModule)
   },
 
 ];

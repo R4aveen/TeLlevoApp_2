@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+
 @Component({
   selector: 'app-cuenta-chofer',
   templateUrl: './cuenta-chofer.page.html',
@@ -12,12 +13,22 @@ export class CuentaChoferPage implements OnInit {
     private alertCtrl:AlertController,
     private router: Router
   ) { }
+  nombre:string="";
+  correo:string="";
 
   pag1() {
     this.router.navigate(['/splash']); // Usar una ruta absoluta con '/' al inicio
   }
   
   ngOnInit() {
+    const usuario = localStorage.getItem("usuario_chofer")
+    if (usuario!=null) {
+      this.nombre=usuario
+    }
+    const correo = localStorage.getItem("correo_chofer")
+    if (correo!=null) {
+      this.correo=correo
+    }
   }
 
   openFileInput() {

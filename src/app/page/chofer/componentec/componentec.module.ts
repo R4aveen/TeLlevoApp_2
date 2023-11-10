@@ -5,6 +5,7 @@ import { IonicModule } from '@ionic/angular';
 import { PanelChoferComponent } from './panel-chofer/panel-chofer.component';
 import { TablasChoferComponent } from './tablas-chofer/tablas-chofer.component';
 
+
 @NgModule({
   declarations: [
     PanelChoferComponent,

@@ -25,10 +25,9 @@
     <ion-card-content>
       <ion-list>
         <ion-item *ngFor="let actividad of actividades">
-          <ion-label>{{ actividad.descripcion }}</ion-label>
+          <ion-label  (click)="abrirModal()">{{ actividad.descripcion }}</ion-label>
           <ion-icon name="heart" slot="end" [color]="actividad.favorito ? 'danger' : 'medium'"
             (click)="agregarFavorito(actividad)"></ion-icon>
-          <ion-button fill="clear" slot="end" (click)="abrirModal()">Ver Detalle</ion-button>
         </ion-item>
       </ion-list>
       

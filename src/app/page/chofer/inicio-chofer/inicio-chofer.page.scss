@@ -1,85 +1,92 @@
-
 .wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    text-align: start;
-    height: 300px;
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  b {
-    width: 100%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #E2D0B2;
-  }
-  
-  .ripple-parent {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid #ddd;
-  }
-  
-  .rectangle {
-    width: 200px;
-    height: 100px;
-    overflow: hidden;
-  }
-  
-  .rounded-rectangle {
-    width: 165px;
-    height: 65px;
-    border-radius: 8px;
-    overflow: hidden;
-  }
-  
-  .circle {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    margin-right: 20px;
-    overflow: hidden;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  text-align: start;
+  height: 300px;
+  width: 300px;
+  margin: 0 auto;
+}
 
-  
-  .swiper-container {
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid #ccc;
-    margin-bottom: 30px;
-  
-    .swiper-slide {
-      position: relative;
-  
-      img {
-        width: 100%;
-        height: auto;
-      }
-  
-      .button-wrapper {
-        position: absolute;
-        bottom: 10px;
-        left: 10px;
-  
-        button {
-          background-color: transparent;
-          border: none;
-          color: white;
-          font-size: 14px;
-          cursor: pointer;
-        }
+b {
+  width: 100%;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #E2D0B2;
+}
+
+
+
+
+
+.swiper-container {
+  width: 80%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+
+  .swiper-slide {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .button-wrapper {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
       }
     }
   }
-  
+}
 
-  ion-content.fondo {
-    --background: url('https://www.google.com/maps/d/thumbnail?mid=1z-8Ns2OiN41oBARmMV9e-1Q1Qtg&hl=es');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
+
+ion-content.fondo {
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#mapa-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: yellow; // Solo para ver el tamaño
+}
+.map{
+  width: 100%;
+  height: 100% !important;
+}
+#map-container{
+  height: 100vh;
+  width: auto;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  height: 50%;
+  z-index: 2;
+
+}
+
+.abierto {
+// Define el estilo para el panel desplegable abierto aquí, por ejemplo:
+transform: translateY(0);
+opacity: 1;
+// Otros estilos de tu elección
+}

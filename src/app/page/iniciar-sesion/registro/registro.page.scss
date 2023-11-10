@@ -17,3 +17,36 @@ ion-radio {
   .radio-checked.ios::part(container) {
     border-color: #6815ec;
   }
+  /* Estilos personalizados para los botones */
+.custom-button {
+  display: flex;
+  justify-content: flex-start; /* Colocar icono al principio */
+  align-items: center; /* Centrar verticalmente el contenido */
+  text-align: right; /* Alinear texto a la izquierda */
+  margin-bottom: 8px; /* Espaciado inferior entre botones */
+}
+
+.button-text {
+  margin-left: 10px; /* Espaciado entre el icono y el texto */
+  font-weight: 500; /* Estilo de fuente del texto */
+}
+
+/* Agrega cualquier otro estilo que desees aquí */
+ion-button{
+    --background: rgba(44, 168, 193, 0.922);
+}
+.large-button {
+  width: 80%; /* Ancho del botón (ajusta según tus necesidades) */
+  max-width: 300px; /* Ancho máximo del botón */
+  display: flex;
+  flex-direction: column; /* Para apilar los botones verticalmente */
+  justify-content: center; /* Para centrar el icono y el texto verticalmente */
+  align-items: center; /* Para centrar el icono y el texto horizontalmente */
+  text-align: center; /* Alinear el texto (el icono y el texto) horizontalmente */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #007bff; /* Color de fondo (puedes cambiarlo) */
+  color: #fff; /* Color del icono y el texto (puedes cambiarlo) */
+  font-size: 20px; /* Tamaño del icono y el texto (puedes cambiarlo) */
+  padding: 20px; /* Espacio interno del botón (ajusta según tus necesidades) */
+  margin: 10px auto; /* Margen para centrar los botones horizontalmente */
+}

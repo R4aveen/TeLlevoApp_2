@@ -17,7 +17,6 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="fondo">
- 
   <ion-card>
     <ion-card-header>
       Actividad Reciente
@@ -25,14 +24,13 @@
     
     <ion-card-content>
       <ion-list>
-        <ion-item *ngIf="actividades.length === 0">
-          <ion-label>No hay viajes</ion-label>
-        </ion-item>
         <ion-item *ngFor="let actividad of actividades">
-          <ion-label (click)="abrirModal()">{{ actividad.descripcion }}</ion-label>
-          <ion-icon name="heart" slot="end" [color]="actividad.favorito ? 'danger' : 'medium'" (click)="agregarFavorito(actividad)"></ion-icon>
+          <ion-label  (click)="abrirModal()">{{ actividad.descripcion }}</ion-label>
+          <ion-icon name="heart" slot="end" [color]="actividad.favorito ? 'danger' : 'medium'"
+            (click)="agregarFavorito(actividad)"></ion-icon>
         </ion-item>
       </ion-list>
+      
     </ion-card-content>
   </ion-card>
 

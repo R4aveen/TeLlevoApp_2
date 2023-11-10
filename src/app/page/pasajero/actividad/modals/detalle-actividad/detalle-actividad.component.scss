@@ -32,18 +32,13 @@ span {
 
 .image-container {
   margin: 16px auto; /* Espaciado entre la información y la imagen */
-  max-width: 100%;
-  width: 300px; /* Ancho fijo */
-  height: 200px; /* Alto fijo para una relación de aspecto rectangular (3:2 en este caso) */
+  max-width: 100%; /* Ancho máximo de la imagen */
   text-align: center; /* Centrar la imagen */
-  overflow: hidden; /* Cortar la imagen si es necesario para que quepa en el contenedor rectangular */
-  position: relative; /* Necesario para el posicionamiento de la imagen */
 }
 
-.image-container img {
-  width: 100%; /* Asegurarse de que la imagen ocupe todo el contenedor rectangular */
-  height: 100%; /* Asegurarse de que la imagen ocupe todo el alto del contenedor */
-  object-fit: cover; /* Ajustar la imagen manteniendo la relación de aspecto y recortando si es necesario */
+img {
+  max-width: 50%;
+  max-height: 50%;
 }
 
 .cerrar-modal-container {

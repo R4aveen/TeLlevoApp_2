@@ -13,12 +13,23 @@ export class CuentaPage implements OnInit {
     private alertCtrl:AlertController,
     private router: Router
   ) { }
+  nombre:string="";
+  correo:string="";
 
   pag1() {
     this.router.navigate(['/splash']); // Usar una ruta absoluta con '/' al inicio
   }
   
   ngOnInit() {
+    const usuario = localStorage.getItem("usuario_pasajero")
+    if (usuario!=null) {
+      this.nombre=usuario
+    }
+    const correo = localStorage.getItem("correo_pasajero")
+    if (correo!=null) {
+      this.correo=correo
+    }
+
   }
 
   openFileInput() {

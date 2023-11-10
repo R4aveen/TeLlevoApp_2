@@ -15,10 +15,11 @@ import { ComponentecModule } from './page/chofer/componentec/componentec.module'
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 
+import { HttpClientModule } from '@angular/common/http';
 //////////// FIREBASE //////////////
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
-import { environment } from 'src/environments/environment';
+//import { AngularFireModule } from '@angular/fire/compat';
+//import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+//import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -28,7 +29,9 @@ import { environment } from 'src/environments/environment';
             AppRoutingModule,
             ComponenteModule,
             ComponentecModule,
-            AngularFireAuthModule,
+            HttpClientModule,
+            //AngularFireModule.initializeApp(environment.firebaseConfig), /// SE INICIALIZA DESDE LA CARPETA COMPACTA DE FIRE NO FIRESTORE
+            //AngularFireAuthModule,
 
           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
