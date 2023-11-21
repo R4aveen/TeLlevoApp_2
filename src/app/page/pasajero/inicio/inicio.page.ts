@@ -37,13 +37,19 @@ export class InicioPage implements OnInit {
 
   }
 
-  //        -70.5849933,
+  // -70.5849933,
   // -33.5974785
 
   ionViewWillEnter(){
     if (!this.map){
       this.construirMapa();
     }
+  }
+
+  
+  ok() {
+    //this.buildMap();
+    this.nuevoMapa();
   }
 
   construirMapa() {
@@ -56,7 +62,7 @@ export class InicioPage implements OnInit {
       accessToken: environment.TOKEN,
       container: 'mapa-box',
       style: 'mapbox://styles/mapbox/streets-v11',
-      zoom: 8,
+      zoom: 15,
       center: [this.lng, this.lat],
     });
     //     -33.435042096955634, -70.75504848650544
