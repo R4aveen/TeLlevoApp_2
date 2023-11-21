@@ -23,7 +23,7 @@ export class InicioPage implements OnInit {
 
   public map: mapbox.Map;
 
-  public style = 'mapbox://styles/mapbox/streets-v11';
+  public style = 'mapbox://styles/mapbox/streets-v12';
 
   private panelAbierto = true; // Variable para rastrear el estado del panel
 
@@ -34,7 +34,6 @@ export class InicioPage implements OnInit {
                ) {}
 
   ngOnInit() {
-
   }
 
   // -70.5849933,
@@ -61,7 +60,7 @@ export class InicioPage implements OnInit {
     this.map = new mapbox.Map({
       accessToken: environment.TOKEN,
       container: 'mapa-box',
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: 'mapbox://styles/mapbox/streets-v12',
       zoom: 15,
       center: [this.lng, this.lat],
     });
@@ -82,7 +81,7 @@ export class InicioPage implements OnInit {
     // mapboxgl.accessToken ='pk.eyJ1IjoiZnJlZGNhbXBvczEyMzAiLCJhIjoiY2xudTl2d2VrMDlpbzJrcWpnYnJkc3JqbCJ9.hjid1kkpkU37wvVJrj2pQg';
     const mapa = new mapbox.Map({
       accessToken:
-        'pk.eyJ1IjoiZnJlZGNhbXBvczEyMzAiLCJhIjoiY2xudTl2d2VrMDlpbzJrcWpnYnJkc3JqbCJ9.hjid1kkpkU37wvVJrj2pQg',
+        'pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw',
       container: 'mapa-box',
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [this.lng,this.lat], // starting position
@@ -108,7 +107,7 @@ export class InicioPage implements OnInit {
   async getRoute(end: any) {
     const map = new mapbox.Map({
       accessToken:
-        'pk.eyJ1IjoiZnJlZGNhbXBvczEyMzAiLCJhIjoiY2xudTl2d2VrMDlpbzJrcWpnYnJkc3JqbCJ9.hjid1kkpkU37wvVJrj2pQg',
+        'pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw',
       container: 'mapa-box',
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [-122.662323, 45.523751], // starting position
