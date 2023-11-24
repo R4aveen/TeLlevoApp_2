@@ -52,11 +52,13 @@ export class InicioPage implements OnInit {
   }
 
   construirMapa() {
+    // TEXTO EN LA POSICION
     const popup = new mapbox.Popup().setHTML(
       `<h6>aqui estoy</h6>
         <span>esta es mi ubicacion</span>
         `
     );
+    //// MANDAR MAPA
     this.map = new mapbox.Map({
       accessToken: environment.TOKEN,
       container: 'mapa-box',
@@ -64,8 +66,8 @@ export class InicioPage implements OnInit {
       zoom: 15,
       center: [this.lng, this.lat],
     });
-    //     -33.435042096955634, -70.75504848650544
-    //     -70.5828046, -33.5990513
+
+    // MARCADOR
     new mapbox.Marker()
       .setLngLat({
          lat:this.lat,lng: this.lng})
@@ -74,14 +76,17 @@ export class InicioPage implements OnInit {
     const marker1 = new mapbox.Marker()
       .setLngLat([12.554729, 55.70651])
       .addTo(this.map);
-  }
 
+
+  }
+  //https://api.mapbox.com/directions/v5/mapbox/cycling/-122.42,37.78;-77.03,38.91?access_token=pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw
+
+  //https://api.mapbox.com/directions/v5/mapbox/cycling/-84.518641,39.134270;-84.512023,39.102779?geometries=geojson&access_token=pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw
 
   nuevoMapa() {
-    // mapboxgl.accessToken ='pk.eyJ1IjoiZnJlZGNhbXBvczEyMzAiLCJhIjoiY2xudTl2d2VrMDlpbzJrcWpnYnJkc3JqbCJ9.hjid1kkpkU37wvVJrj2pQg';
+    // mapboxgl.accessToken ='pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw';
     const mapa = new mapbox.Map({
-      accessToken:
-        'pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw',
+      accessToken:'pk.eyJ1IjoicjR2ZWVlbiIsImEiOiJjbG9xMjNwdmswZHhsMm5udXJhZWdtMXZqIn0.y3jYTk9dbMoa8pdxK8oHUw',
       container: 'mapa-box',
       style: 'mapbox://styles/mapbox/streets-v12',
       center: [this.lng,this.lat], // starting position
@@ -92,7 +97,7 @@ export class InicioPage implements OnInit {
       [-123.069003, 45.395273],
       [-122.303707, 45.612333],
     ];
-    //map.setMaxBounds(bounds);
+    //mapa.setMaxBounds(bounds);
 
     // an arbitrary start will always be the same
     // only the end or destination will change
