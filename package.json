@@ -30,6 +30,7 @@
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.3.3",
     "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@mapbox/mapbox-sdk": "^0.15.3",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.0",
     "firebase": "^10.4.0",

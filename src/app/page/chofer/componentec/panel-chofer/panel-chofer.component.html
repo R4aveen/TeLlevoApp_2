@@ -5,7 +5,8 @@
       <ion-grid>
         <ion-row>
           <ion-col>
-            <h3 class="titulo">Crear viaje</h3>
+          <h3 class="titulo">Crear viaje</h3>
+            
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -37,14 +38,22 @@
         <ion-col size="12">
           <div class="custom-history">
             <h5 class="custom-text">Direcciones del viaje</h5>
-            <ion-button expand="full" class="custom-button custom-bg-color">
-              <ion-icon name="car-sport-outline" slot="start"></ion-icon>
-              <span class="custom-button-text">Desde:</span>
-            </ion-button>
-            <ion-button expand="full" class="custom-button custom-bg-color">
-              <ion-icon name="car-sport-outline" slot="start"></ion-icon>
-              <span class="custom-button-text">Hasta:</span>
-            </ion-button>
+            <ion-item>
+              <ion-label position="floating">desde lat</ion-label>
+              <ion-input  [(ngModel)]="desde_lat" name="desde_lat" type="float"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label position="floating">desde long</ion-label>
+                <ion-input  [(ngModel)]="desde_long" name="desde_long" type="float"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label position="floating">hasta lat</ion-label>
+                  <ion-input  [(ngModel)]="hasta_lat" name="hasta_lat" type="float"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label position="floating">hasta long</ion-label>
+                    <ion-input  [(ngModel)]="hasta_long" name="hasta_long" type="float"></ion-input>
+                    </ion-item>
           </div>
         </ion-col>
       </ion-row>
@@ -53,9 +62,10 @@
     <ion-grid>
       <ion-row>
         <ion-col size="12">
-          <div class="custom-history">
-            <ion-input style="color: black;" label="Capacidad de pasajeros:" placeholder="1-4" ></ion-input>
-          </div>
+          <ion-item>
+            <ion-label position="floating">Numero de pasajeros</ion-label>
+            <ion-input  [(ngModel)]="pasajeros" name="1-4" type="number"></ion-input>
+            </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -63,21 +73,23 @@
     <ion-grid>
       <ion-row>
         <ion-col size="12">
-          <div class="custom-history">
-            <ion-input style="color: black;" label="Precio: $" placeholder="Ingrese costo del pasaje: " ></ion-input>
-          </div>
+          <ion-item>
+            <ion-label position="floating">Costo</ion-label>
+            <ion-input  [(ngModel)]="costo" name="costo" type="number"></ion-input>
+            </ion-item>
         </ion-col>
       </ion-row>
     </ion-grid>
+
     <ion-grid>
       <ion-row>
         <ion-col size="12">
           <div class="custom-history">
-            <ion-button expand="full">GENERAR VIAJE</ion-button>
+            <ion-button expand="full" (click)="grabar()">GENERAR VIAJE</ion-button>
           </div>
         </ion-col>
       </ion-row>
     </ion-grid>
   </div>
-
+<br><br>
 </ion-content>

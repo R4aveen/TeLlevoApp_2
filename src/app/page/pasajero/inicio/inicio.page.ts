@@ -18,8 +18,9 @@ import { environment } from 'src/environments/environment';
 export class InicioPage implements OnInit {
 
 
-  lat:number=-33.56240688984817;
-  lng:number=-70.67436606066005;
+  lat:number=-33.598535188893884;
+  lng:number=-70.57905759269354;
+
 
   public map: mapbox.Map;
 
@@ -36,8 +37,6 @@ export class InicioPage implements OnInit {
   ngOnInit() {
   }
 
-  // -70.5849933,
-  // -33.5974785
 
   ionViewWillEnter(){
     if (!this.map){

@@ -8,6 +8,8 @@ import { ChoferAPI } from '../interfaces/chofer-api';
 
 import { Observable } from 'rxjs';
 
+import { ViajeAPI } from '../interfaces/viaje_api';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -55,3 +57,24 @@ export class APIChoferDjangoService {
   }
 }
 
+@Injectable({
+  providedIn: 'root'
+})
+export class APIViajeDjangoService {
+
+  constructor(private http:HttpClient) { }
+
+  url:string="http://127.0.0.1:8000"
+  urlViajeRec:string=this.url+"/api/viaje/"
+  listar(){
+    return this.http.get<ViajeAPI[]>(this.urlViajeRec)
+  }
+  grabar(viaje: ViajeAPI){
+    return this.http.post(this.urlViajeRec,viaje)
+  }
+
+  buscarChofer(id_chofer: string): Observable<ViajeAPI> {
+    const url = `${this.urlViajeRec}?id_chofer=${id_chofer}`;
+    return this.http.get<ViajeAPI>(url);
+  }
+}

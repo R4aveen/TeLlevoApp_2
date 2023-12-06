@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-
+import { FormsModule } from '@angular/forms';
 import { PanelChoferComponent } from './panel-chofer/panel-chofer.component';
 import { TablasChoferComponent } from './tablas-chofer/tablas-chofer.component';
 
@@ -15,6 +15,7 @@ import { TablasChoferComponent } from './tablas-chofer/tablas-chofer.component';
   imports: [
     CommonModule,
     IonicModule,
+    FormsModule,
     // Otros módulos que puedas necesitar
   ],
   exports: [

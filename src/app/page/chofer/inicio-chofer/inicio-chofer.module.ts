@@ -13,6 +13,7 @@ import { InicioChoferPage } from './inicio-chofer.page';
     FormsModule,
     IonicModule,
     InicioChoferPageRoutingModule,
+
   ],
   declarations: [InicioChoferPage], // No necesitas declarar los componentes nuevamente
 })
