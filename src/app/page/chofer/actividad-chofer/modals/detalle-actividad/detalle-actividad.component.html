@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="detalle-content">
+  <ion-grid class="detalle-container">
+    <ion-row>
+      <ion-col size="12">
+        <div class="info-section">
+          <h2>Información General</h2>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Fecha y Hora:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>{{ viaje.fecha }} {{ viaje.hora_inicio }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Origen:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>{{ viaje.origen }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Destino:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>{{ viaje.destino }}</span>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="12">
+        <div class="info-section">
+          <h2>Detalles Adicionales</h2>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Número de Pasajeros:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>{{ viaje.pasajeros }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Precio por Pasajero:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>{{ viaje.costo }}</span>
+            </ion-col>
+          </ion-row>
+          <ion-row class="info-row">
+            <ion-col size="5">
+              <label>Calificación del Viaje:</label>
+            </ion-col>
+            <ion-col size="7">
+              <span>{{ viaje.calificacion }} estrellas</span>
+            </ion-col>
+          </ion-row>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div class="image-container" *ngIf="viaje?.imagen">
+    <img [src]="viaje?.imagen" alt="Imagen Detalle">
+  </div>
+
+  <div class="cerrar-modal-container">
+    <ion-button expand="block" (click)="cerrarModal()">Cerrar</ion-button>
+  </div>
+</ion-content>

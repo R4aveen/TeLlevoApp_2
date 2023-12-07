@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button color="medium" (click)="cancel()">Cancel</ion-button>
+    </ion-buttons>
+    <ion-title>Viajar</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<ion-content class="ion-padding">
+  <ion-grid>
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+
+          
+<!------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+      <ion-row>
+          <ion-col>
+            <ion-searchbar [debounce]="1000" [(ngModel)]="direccion"></ion-searchbar>
+    
+            <ion-list *ngIf="results.length > 0">
+              <ion-item *ngFor="let result of results">
+              <!-- <ion-img [src]="result.imageUrl" alt="{{ result.name }}"></ion-img> -->
+              </ion-item>
+            </ion-list>
+            <ion-label *ngIf="results.length === 0">Empieza tu viaje buscando la direccion!!!</ion-label>
+          </ion-col>
+        </ion-row>
+<!------------------------------------------------------------------------>
+      <!------------------------------------------------------------------------>
+      <form *ngIf="showForm">
+          <ion-row class="data-row">
+            <ion-col>
+              <ion-item>
+                <ion-label>Nombre:</ion-label>
+                <ion-input [(ngModel)]="selectedName" placeholder="{{ randomName }}" disabled></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Vehículo:</ion-label>
+                <ion-input [(ngModel)]="selectedVehicle" placeholder="{{ randomVehicle }}" disabled></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Patente:</ion-label>
+                <ion-input [(ngModel)]="selectedPatente" placeholder="{{ randomPatente }}" disabled></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label>Valoración:</ion-label>
+                <app-valoracion [rating]="selectedValoracion"></app-valoracion>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </form>
+        
+        
+
+
+
+
+
+      <!-- Botones -->
+      <ion-row class="button-row">
+        <ion-col size="6">           
+          <ion-button (click)="buscar()">
+              buscar   
+              <ion-icon name="timer-outline" slot="end"></ion-icon>
+            </ion-button>
+      </ion-col>
+          <ion-col size="6">
+              <ion-button (click)="ir()">
+                  Iniciar viaje    
+                  <ion-icon name="car-sport-outline" slot="end"></ion-icon>
+                </ion-button>
+          </ion-col>
+
+      </ion-row>
+
+      <!-- Lista para mostrar el mensaje -->
+
+<!-- Botón de regreso (condicional) -->
+
+
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+<!-- ... Otros elementos existentes ... -->
+
+<!-- Mostrar el ion-select y el botón "Volver" cuando el viaje es tomado -->
+<ion-select *ngIf="viajeTomado" interface="alert" [(ngModel)]="isChofer">
+  <ion-select-option value="true">Chofer</ion-select-option>
+  <ion-select-option value="false">Pasajero</ion-select-option>
+</ion-select>
+
+
+<ion-button *ngIf="viajeTomado" (click)="volver()">Volver</ion-button>
+
+<!-- ... Otros elementos existentes ... -->
+
+<!------------------------------------------------------------------------>
+<!------------------------------------------------------------------------>
+  </ion-grid>
+</ion-content>

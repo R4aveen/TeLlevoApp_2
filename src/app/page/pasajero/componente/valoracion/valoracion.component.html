@@ -1,0 +1,8 @@
+<div class="rating">
+  <ng-container *ngFor="let star of stars; let i = index">
+    <ion-icon [name]="star" *ngIf="i < rating; else emptyStar" class="star-filled"></ion-icon>
+    <ng-template #emptyStar>
+      <ion-icon name="star-outline" class="star-empty"></ion-icon>
+    </ng-template>
+  </ng-container>
+</div>
